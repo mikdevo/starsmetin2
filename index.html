@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en" dir="ltr" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#070913">
+  <meta name="description" content="Complete bilingual command guide for the STARS Metin2 Discord system bot.">
+  <title>STARS System Bot — Command Guide</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#commands">Skip to commands</a>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <nav class="nav-shell" aria-label="Main navigation">
+      <a class="brand" href="#top" aria-label="STARS System Bot home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 48 48" role="img"><path d="m24 3 5.7 12.2L43 17l-9.7 9.4 2.4 13.3L24 33.4l-11.7 6.3 2.4-13.3L5 17l13.3-1.8L24 3Z"/><path class="mark-cut" d="m24 12 2.8 6 6.5.9-4.8 4.6 1.2 6.5-5.7-3.1-5.7 3.1 1.2-6.5-4.8-4.6 6.5-.9 2.8-6Z"/></svg>
+        </span>
+        <span><strong>STARS</strong><small>System Bot</small></span>
+      </a>
+
+      <div class="desktop-nav">
+        <a href="#commands" data-i18n="nav.commands">Commands</a>
+        <a href="#systems" data-i18n="nav.systems">Systems</a>
+        <a href="#quickstart" data-i18n="nav.start">Quick start</a>
+        <a href="#faq" data-i18n="nav.faq">FAQ</a>
+      </div>
+
+      <div class="nav-actions">
+        <button class="icon-button" id="themeToggle" type="button" aria-label="Switch color theme">
+          <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5 8.5 8.5 0 1 0 20.5 14.2Z"/></svg>
+        </button>
+        <div class="language-switch" role="group" aria-label="Language">
+          <button type="button" data-language="en" class="active">EN</button>
+          <button type="button" data-language="ar">ع</button>
+        </div>
+        <button class="menu-button" id="menuButton" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="mobileMenu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu" hidden>
+      <a href="#commands" data-i18n="nav.commands">Commands</a>
+      <a href="#systems" data-i18n="nav.systems">Systems</a>
+      <a href="#quickstart" data-i18n="nav.start">Quick start</a>
+      <a href="#faq" data-i18n="nav.faq">FAQ</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section-shell" aria-labelledby="heroTitle">
+      <div class="hero-copy reveal">
+        <div class="eyebrow"><span class="pulse-dot"></span><span data-i18n="hero.eyebrow">Official command documentation</span></div>
+        <h1 id="heroTitle"><span data-i18n="hero.titleA">One bot.</span> <em data-i18n="hero.titleB">Every community tool.</em></h1>
+        <p data-i18n="hero.description">Discover every command, permission, alias, and real example for the STARS Metin2 system bot.</p>
+        <div class="hero-actions">
+          <a class="primary-button magnetic" href="#commands">
+            <span data-i18n="hero.explore">Explore commands</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+          </a>
+          <a class="secondary-button" href="#quickstart" data-i18n="hero.start">Setup guide</a>
+        </div>
+        <div class="hero-metrics" aria-label="Bot documentation metrics">
+          <div><strong id="heroCommandCount">62</strong><span data-i18n="metrics.commands">Commands</span></div>
+          <div><strong>2</strong><span data-i18n="metrics.languages">Languages</span></div>
+          <div><strong>24/7</strong><span data-i18n="metrics.automation">Automation</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal delay-one" aria-label="Interactive bot command preview">
+        <div class="orbital-ring ring-one"></div>
+        <div class="orbital-ring ring-two"></div>
+        <div class="command-window glass-panel">
+          <div class="window-topbar">
+            <div class="window-dots"><i></i><i></i><i></i></div>
+            <span>STARS • COMMAND CENTER</span>
+            <div class="status-pill"><i></i><span data-i18n="hero.online">Online</span></div>
+          </div>
+          <div class="discord-preview">
+            <div class="bot-avatar">S</div>
+            <div class="preview-content">
+              <div class="bot-line"><strong>STARS System</strong><span class="app-badge">APP</span><small data-i18n="hero.now">Now</small></div>
+              <div class="preview-embed">
+                <span class="embed-accent"></span>
+                <div class="preview-label" data-i18n="preview.label">SYSTEM OVERVIEW</div>
+                <h3 data-i18n="preview.title">Your complete community toolkit</h3>
+                <p data-i18n="preview.text">Moderation, tickets, leveling, giveaways, automation and much more.</p>
+                <div class="preview-grid">
+                  <span><i>🛡️</i><b data-i18n="preview.mod">Moderation</b></span>
+                  <span><i>🎫</i><b data-i18n="preview.tickets">Tickets</b></span>
+                  <span><i>⚡</i><b data-i18n="preview.auto">Automation</b></span>
+                  <span><i>📈</i><b data-i18n="preview.levels">Leveling</b></span>
+                </div>
+              </div>
+              <div class="preview-buttons"><button tabindex="-1">✨ General</button><button tabindex="-1">🛡️ Mods</button><button tabindex="-1">⚙️ Owner</button></div>
+            </div>
+          </div>
+        </div>
+        <div class="floating-chip chip-one"><span>⚡</span><b>/automod</b></div>
+        <div class="floating-chip chip-two"><span>🎉</span><b>/giveaway</b></div>
+      </div>
+    </section>
+
+    <section class="trust-strip" aria-label="Core capabilities">
+      <div class="marquee-track">
+        <span>✦ <b data-i18n="strip.moderation">Advanced moderation</b></span>
+        <span>✦ <b data-i18n="strip.tickets">Complete ticket system</b></span>
+        <span>✦ <b data-i18n="strip.leveling">Leveling & rewards</b></span>
+        <span>✦ <b data-i18n="strip.automations">Persistent automations</b></span>
+        <span>✦ <b data-i18n="strip.bilingual">English & Arabic</b></span>
+        <span aria-hidden="true">✦ <b data-i18n="strip.moderation">Advanced moderation</b></span>
+        <span aria-hidden="true">✦ <b data-i18n="strip.tickets">Complete ticket system</b></span>
+        <span aria-hidden="true">✦ <b data-i18n="strip.leveling">Leveling & rewards</b></span>
+      </div>
+    </section>
+
+    <section class="commands-section section-shell" id="commands" aria-labelledby="commandsTitle">
+      <div class="section-heading reveal">
+        <div>
+          <span class="section-kicker" data-i18n="commands.kicker">COMMAND DIRECTORY</span>
+          <h2 id="commandsTitle" data-i18n="commands.title">Find the right command instantly.</h2>
+        </div>
+        <p data-i18n="commands.description">Search by name, purpose, alias, or permission. Open any card for full details and copy-ready examples.</p>
+      </div>
+
+      <div class="command-toolbar glass-panel reveal">
+        <label class="search-field" for="commandSearch">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+          <input id="commandSearch" type="search" autocomplete="off" data-i18n-placeholder="commands.search" placeholder="Search commands, aliases, features…">
+          <kbd>/</kbd>
+        </label>
+        <div class="view-controls">
+          <button id="slashFilter" class="control-button active" type="button" data-mode="all"><span>#</span><b data-i18n="commands.allModes">All modes</b></button>
+          <button id="resetFilters" class="icon-button small" type="button" data-i18n-aria="commands.reset" aria-label="Reset filters">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11a8 8 0 1 0-2.34 5.66M20 4v7h-7"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="category-tabs" id="categoryTabs" role="tablist" aria-label="Command categories"></div>
+      <div class="results-line"><span id="resultsCount"></span><span id="activeHint"></span></div>
+      <div class="command-grid" id="commandGrid" aria-live="polite"></div>
+      <div class="empty-state" id="emptyState" hidden>
+        <div>⌁</div><h3 data-i18n="commands.emptyTitle">No commands found</h3><p data-i18n="commands.emptyText">Try another search or reset your filters.</p>
+        <button class="secondary-button" type="button" id="emptyReset" data-i18n="commands.resetButton">Reset filters</button>
+      </div>
+    </section>
+
+    <section class="systems-section section-shell" id="systems" aria-labelledby="systemsTitle">
+      <div class="section-heading reveal">
+        <div><span class="section-kicker" data-i18n="systems.kicker">BUILT FOR COMMUNITIES</span><h2 id="systemsTitle" data-i18n="systems.title">More than a command list.</h2></div>
+        <p data-i18n="systems.description">Persistent systems keep working through restarts, with polished Discord UI and safe owner controls.</p>
+      </div>
+      <div class="systems-grid">
+        <article class="system-card featured reveal"><div class="system-icon violet">🛡️</div><span class="card-number">01</span><h3 data-i18n="systems.securityTitle">Security & moderation</h3><p data-i18n="systems.securityText">Link AutoMod, word filters, timeouts, bans, locks, audit logs, and safe permission checks.</p><div class="system-tags"><span>AutoMod</span><span>Logs</span><span>Blacklist</span></div></article>
+        <article class="system-card reveal delay-one"><div class="system-icon cyan">🎫</div><span class="card-number">02</span><h3 data-i18n="systems.ticketTitle">Ticket workspace</h3><p data-i18n="systems.ticketText">Panels, sections, invoices, transcripts, ratings, staff analytics, snippets, and inactivity handling.</p><div class="system-tags"><span>Panels</span><span>Invoices</span><span>Analytics</span></div></article>
+        <article class="system-card reveal"><div class="system-icon amber">⚡</div><span class="card-number">03</span><h3 data-i18n="systems.autoTitle">Smart automation</h3><p data-i18n="systems.autoText">Scheduled messages, auto roles, replies, lines, mentions, welcomes, temp voice rooms, and applications.</p><div class="system-tags"><span>24/7</span><span>JSON</span><span>Persistent</span></div></article>
+        <article class="system-card reveal delay-one"><div class="system-icon pink">✨</div><span class="card-number">04</span><h3 data-i18n="systems.communityTitle">Community growth</h3><p data-i18n="systems.communityText">Level rewards, rankings, giveaways, quote cards, booster art, and live STARS website listings.</p><div class="system-tags"><span>Levels</span><span>Giveaways</span><span>Canvas</span></div></article>
+      </div>
+    </section>
+
+    <section class="quickstart-section section-shell" id="quickstart" aria-labelledby="quickTitle">
+      <div class="quickstart-panel glass-panel reveal">
+        <div class="quick-copy">
+          <span class="section-kicker" data-i18n="quick.kicker">GET STARTED</span>
+          <h2 id="quickTitle" data-i18n="quick.title">From zero to ready in minutes.</h2>
+          <p data-i18n="quick.description">The bot registers slash commands automatically and stores every configurable system safely.</p>
+          <div class="permission-note"><span>!</span><p data-i18n="quick.permission">Enable Message Content and Server Members intents, then place the bot role above roles it manages.</p></div>
+        </div>
+        <ol class="steps-list">
+          <li><span>01</span><div><h3 data-i18n="quick.step1Title">Configure</h3><p data-i18n="quick.step1Text">Set owner IDs, channels, reactions, and environment tokens.</p><code>config.js</code></div></li>
+          <li><span>02</span><div><h3 data-i18n="quick.step2Title">Install</h3><p data-i18n="quick.step2Text">Install the locked project dependencies.</p><code>npm install</code></div><button class="copy-inline" data-copy="npm install" type="button" aria-label="Copy npm install">⧉</button></li>
+          <li><span>03</span><div><h3 data-i18n="quick.step3Title">Launch</h3><p data-i18n="quick.step3Text">Start the bot and slash commands register automatically.</p><code>npm start</code></div><button class="copy-inline" data-copy="npm start" type="button" aria-label="Copy npm start">⧉</button></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="faq-section section-shell" id="faq" aria-labelledby="faqTitle">
+      <div class="section-heading compact reveal"><div><span class="section-kicker" data-i18n="faq.kicker">GOOD TO KNOW</span><h2 id="faqTitle" data-i18n="faq.title">Frequently asked questions.</h2></div></div>
+      <div class="faq-list reveal">
+        <details><summary><span data-i18n="faq.q1">Can every command use both slash and prefix?</span><i></i></summary><p data-i18n="faq.a1">Most commands support both. Security-sensitive or interface-heavy commands marked “Slash only” must use Discord slash commands.</p></details>
+        <details><summary><span data-i18n="faq.q2">Do settings survive a restart?</span><i></i></summary><p data-i18n="faq.a2">Yes. Configurable systems use persistent JSON or SQLite storage, and publisher messages are edited instead of duplicated.</p></details>
+        <details><summary><span data-i18n="faq.q3">How do I change the bot language?</span><i></i></summary><p data-i18n="faq.a3">A configured owner can run /lang language:ar or /lang language:en. The selected locale applies across the bot.</p></details>
+        <details><summary><span data-i18n="faq.q4">Why is a command missing in Discord?</span><i></i></summary><p data-i18n="faq.a4">Restart the bot to register definitions. Guild commands update immediately; global commands can take longer to appear.</p></details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="section-shell footer-inner">
+      <a class="brand" href="#top"><span class="brand-mark mini" aria-hidden="true">★</span><span><strong>STARS</strong><small>System Bot</small></span></a>
+      <p data-i18n="footer.text">Built for the STARS Metin2 community.</p>
+      <a href="#top" class="back-top"><span data-i18n="footer.top">Back to top</span> ↑</a>
+    </div>
+  </footer>
+
+  <dialog class="command-dialog" id="commandDialog" aria-labelledby="dialogTitle">
+    <div class="dialog-glow" aria-hidden="true"></div>
+    <button class="dialog-close" id="dialogClose" type="button" aria-label="Close command details">×</button>
+    <div id="dialogContent"></div>
+  </dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <noscript><div class="noscript">JavaScript is required to browse and filter the command directory.</div></noscript>
+  <script src="commands.js" defer></script>
+  <script src="app.js" defer></script>
+</body>
+</html>
